@@ -49,6 +49,14 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Amazon specific colors */
+    --amazon-dark: 215 33% 10%;       /* Dark header blue */
+    --amazon-navy: 214 26% 19%;       /* Navbar blue */
+    --amazon-yellow: 37 99% 71%;      /* Yellow for buttons/highlights */
+    --amazon-orange: 36 100% 50%;     /* Amazon orange */
+    --amazon-green: 120 100% 23%;     /* Success green (price savings) */
+    --amazon-lightgray: 180 6% 93%;   /* Light gray background */
   }
 
   .dark {
@@ -97,5 +105,35 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Amazon specific styles */
+@layer utilities {
+  .amazon-link {
+    @apply text-blue-500 hover:text-amazon-orange hover:underline cursor-pointer;
+  }
+  
+  .amazon-button-primary {
+    @apply bg-amazon-yellow hover:bg-amazon-yellow/90 text-amazon-dark font-medium;
+  }
+  
+  .amazon-button-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-amazon-dark font-medium;
+  }
+  
+  .amazon-gradient-overlay {
+    @apply bg-gradient-to-b from-amazon-dark/20 to-amazon-lightgray;
   }
 }

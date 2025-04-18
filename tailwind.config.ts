@@ -61,6 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Amazon colors
+				amazon: {
+					dark: '#131921',      // Dark header blue
+					navy: '#232f3e',      // Navbar blue
+					yellow: '#febd69',    // Yellow for buttons/highlights
+					orange: '#FF9900',    // Amazon orange
+					green: '#007600',     // Success green (price savings)
+					lightgray: '#eaeded', // Light gray background
+					white: '#ffffff',     // White
 				}
 			},
 			borderRadius: {
